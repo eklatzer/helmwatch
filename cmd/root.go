@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"context"
+	"helmwatch/cmd/version"
 	"helmwatch/internal/config"
 	"helmwatch/internal/msg"
 	"helmwatch/internal/tui"
@@ -20,6 +21,8 @@ const (
 
 func Execute() {
 	rootCmd := new()
+
+	rootCmd.AddCommand(version.New())
 
 	if err := rootCmd.Execute(); err != nil {
 		log.Fatal(err)

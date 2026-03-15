@@ -31,6 +31,12 @@ Interactive Helm diff watcher
 
 Usage:
   helmwatch [flags]
+  helmwatch [command]
+
+Available Commands:
+  completion  Generate the autocompletion script for the specified shell
+  help        Help about any command
+  version     Print the version
 
 Flags:
       --chart string     Path to the chart or remote chart reference (default ".")
