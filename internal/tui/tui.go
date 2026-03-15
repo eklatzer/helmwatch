@@ -68,7 +68,7 @@ func (m Model) Update(message tea.Msg) (tea.Model, tea.Cmd) {
 
 	case tea.WindowSizeMsg:
 		m.viewport.Width = message.Width
-		m.viewport.Height = message.Height
+		m.viewport.Height = message.Height - 2
 		return m, nil
 
 	case tea.KeyMsg:
@@ -109,7 +109,7 @@ func (m Model) Update(message tea.Msg) (tea.Model, tea.Cmd) {
 }
 
 func (m Model) View() string {
-	header := titleStyle.Render("Helm Diff (q quit | r rerender | / search)")
+	header := titleStyle.Render("Helmwatch (q quit | r rerender | / search)")
 	if m.searchMode {
 		return fmt.Sprintf("%s\n/%s\n\n%s", header, m.input.View(), m.viewport.View())
 	}
