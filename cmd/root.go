@@ -2,13 +2,14 @@ package cmd
 
 import (
 	"context"
-	"helmwatch/cmd/version"
-	"helmwatch/internal/config"
-	"helmwatch/internal/msg"
-	"helmwatch/internal/tui"
-	"helmwatch/internal/watcher"
 	"log"
 	"time"
+
+	"github.com/eklatzer/helmwatch/cmd/version"
+	"github.com/eklatzer/helmwatch/internal/config"
+	"github.com/eklatzer/helmwatch/internal/msg"
+	"github.com/eklatzer/helmwatch/internal/tui"
+	"github.com/eklatzer/helmwatch/internal/watcher"
 
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/sgtdi/fswatcher"

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"helmwatch/cmd"
+	"github.com/eklatzer/helmwatch/cmd"
 )
 
 func main() {

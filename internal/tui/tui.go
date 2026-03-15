@@ -2,11 +2,12 @@ package tui
 
 import (
 	"fmt"
-	"helmwatch/internal/config"
-	"helmwatch/internal/diff"
-	"helmwatch/internal/helm"
-	"helmwatch/internal/msg"
 	"strings"
+
+	"github.com/eklatzer/helmwatch/internal/config"
+	"github.com/eklatzer/helmwatch/internal/diff"
+	"github.com/eklatzer/helmwatch/internal/helm"
+	"github.com/eklatzer/helmwatch/internal/msg"
 
 	"github.com/charmbracelet/bubbles/textinput"
 	"github.com/charmbracelet/bubbles/viewport"

@@ -1,4 +1,4 @@
-module helmwatch
+module github.com/eklatzer/helmwatch
 
 go 1.25.4
 
