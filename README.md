@@ -39,11 +39,12 @@ Available Commands:
   version     Print the version
 
 Flags:
-      --chart string     Path to the chart or remote chart reference (default ".")
-      --config string    Path to the helmwatch config (default "helmwatch.yaml")
-  -h, --help             help for helmwatch
-      --values string    Path to the values file (default "values.yaml")
-      --version string   Version of the chart
+      --chart string       Path to the chart or remote chart reference (default ".")
+      --config string      Path to the helmwatch config (default "helmwatch.yaml")
+  -h, --help               help for helmwatch
+      --namespace string   Namespace used to render the chart (default "default")
+      --values string      Path to the values file (default "values.yaml")
+      --version string     Version of the chart
 ```
 
 ### Example Usage
@@ -54,7 +55,7 @@ helmwatch
 
 # watch changes using a remote helm chart with a local helm values file
 # requires helm repo add ...
-helmwatch --chart argo/argo-cd --version 9.3.7
+helmwatch --chart argo/argo-cd --version 9.3.7 --namespace argocd
 ```
 
 ### Configuration
