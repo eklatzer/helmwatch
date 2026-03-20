@@ -16,6 +16,7 @@ type TemplateOptions struct {
 	Chart      string
 	Version    string
 	ValuesFile string
+	Namespace  string
 	Exclusions []string
 }
 
@@ -25,7 +26,14 @@ func Template(options TemplateOptions) (string, error) {
 		return "", err
 	}
 
-	args := []string{"template", releaseName, options.Chart, "-f", options.ValuesFile, "--output-dir", dir}
+	args := []string{
+		"template",
+		releaseName,
+		options.Chart,
+		"-f", options.ValuesFile,
+		"--output-dir", dir,
+		"--namespace", options.Namespace,
+	}
 
 	if options.Version != "" {
 		args = append(args, "--version", options.Version)

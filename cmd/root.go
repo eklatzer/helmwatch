@@ -66,6 +66,7 @@ func new() *cobra.Command {
 	cmd.Flags().StringVar(&flags.Version, "version", "", "Version of the chart")
 	cmd.Flags().StringVar(&flags.ConfigPath, "config", "helmwatch.yaml", "Path to the helmwatch config")
 	cmd.Flags().StringVar(&flags.ValuesFile, "values", "values.yaml", "Path to the values file")
+	cmd.Flags().StringVar(&flags.Namespace, "namespace", "default", "Namespace used to render the chart")
 
 	return cmd
 }

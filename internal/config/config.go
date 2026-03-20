@@ -18,6 +18,7 @@ type Flags struct {
 	Chart      string
 	Version    string
 	ValuesFile string
+	Namespace  string
 }
 
 func Load(path string) (Config, error) {

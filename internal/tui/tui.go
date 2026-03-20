@@ -122,6 +122,7 @@ func (m *Model) renderChartAndShowDiff() tea.Cmd {
 			Chart:      m.config.Chart,
 			Version:    m.config.Version,
 			ValuesFile: m.config.ValuesFile,
+			Namespace:  m.config.Namespace,
 			Exclusions: m.config.Exclusions,
 		})
 		if err != nil {
